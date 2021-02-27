@@ -11,15 +11,15 @@ class Stacc < Formula
 
   if OS.mac?
     url "https://github.com/stacc/stacc-CLI/releases/download/v0.1.0/stacc_0.1.0_Darwin_x86_64.tar.gz"
-    sha256 "3b13de78c1cdb8c1e1cef84a7722750514e5503cd052b3e0fd722ff0cba89e6d"
+    sha256 "0616529b751c2d566a9a129e058e4ba6196428c3e422d40914f95df8dab8287f"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/stacc/stacc-CLI/releases/download/v0.1.0/stacc_0.1.0_Linux_x86_64.tar.gz"
-    sha256 "e46e3dacd71c8a97b17d2e137a895d76ce29aa6a7a69e6525b543c2f30332d1f"
+    sha256 "4c4cc2c80281d002311ec0510cd4f3277aaa1455e222a0399a4afd3052e4a85a"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
     url "https://github.com/stacc/stacc-CLI/releases/download/v0.1.0/stacc_0.1.0_Linux_arm64.tar.gz"
-    sha256 "e34296edd0cd7055424aff7f49b2edbab5e173b214404941a9d38a286e38dcb8"
+    sha256 "6597953bd70436600907a4583b8765a274ec545e0fa366bffdb3d2db692c8208"
   end
 
   def install
