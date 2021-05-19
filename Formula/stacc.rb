@@ -5,25 +5,25 @@
 class Stacc < Formula
   desc "Software used to communicate with Stacc cloud environments"
   homepage "https://github.com/stacc/stacc-CLI"
-  version "0.1.59"
+  version "0.1.60"
   license "Apache-2.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/stacc/stacc-CLI/releases/download/v0.1.59/stacc_0.1.59_Darwin_x86_64.tar.gz"
-    sha256 "47eaa36de3e3879ab2863eea2c905a5215a630b7a8155bdd96500d0c4bebd0a7"
+    url "https://github.com/stacc/stacc-CLI/releases/download/v0.1.60/stacc_0.1.60_Darwin_x86_64.tar.gz"
+    sha256 "5af3e434ce2ac93ed201bcae85cdbcec103ef86d7f6218bf776bf9e417de9912"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/stacc/stacc-CLI/releases/download/v0.1.59/stacc_0.1.59_Darwin_arm64.tar.gz"
-    sha256 "ac57d84d9fc4dd6ba861820d7eddb7aa5a43bd323c14a34b306bb921cacfc6f3"
+    url "https://github.com/stacc/stacc-CLI/releases/download/v0.1.60/stacc_0.1.60_Darwin_arm64.tar.gz"
+    sha256 "f776794f2d008db827203ba95cb1d5f0ca3cc3d015d5df93dd0219a704431127"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/stacc/stacc-CLI/releases/download/v0.1.59/stacc_0.1.59_Linux_x86_64.tar.gz"
-    sha256 "78ecb2c3d56969777813e277b68ea54edfc2f1667c3024138895d5b041c0246e"
+    url "https://github.com/stacc/stacc-CLI/releases/download/v0.1.60/stacc_0.1.60_Linux_x86_64.tar.gz"
+    sha256 "4204efcb93c04ff673f3885200d7f04aa382302ba0879ee327ab81476239ac9b"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/stacc/stacc-CLI/releases/download/v0.1.59/stacc_0.1.59_Linux_arm64.tar.gz"
-    sha256 "9ac09e960638428f55265508427ef563ec06422913719ba15440f1b863034eae"
+    url "https://github.com/stacc/stacc-CLI/releases/download/v0.1.60/stacc_0.1.60_Linux_arm64.tar.gz"
+    sha256 "bdc83586163d789b6e7e304f695794b7b687bea1b5c7f42c65c4d64e6f4d676d"
   end
 
   def install
