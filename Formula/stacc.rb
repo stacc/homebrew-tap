@@ -5,25 +5,30 @@
 class Stacc < Formula
   desc "Software used to communicate with Stacc cloud environments"
   homepage "https://github.com/stacc/stacc-CLI"
-  version "0.1.115"
+  version "0.2.29"
   license "Apache-2.0"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/stacc/stacc-CLI/releases/download/v0.1.115/stacc_0.1.115_Darwin_x86_64.tar.gz"
-    sha256 "59d71eb2121a9418b492304e95878cfd939e3615c1002fd5c9e9dfffb1095639"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/stacc/stacc-CLI/releases/download/v0.2.29/stacc_0.2.29_Darwin_x86_64.tar.gz"
+      sha256 "6e0245a96ebf1860aa67bca9a1e6291ad56c76ffe7ccc0a2a724a3a3fea8cb4e"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/stacc/stacc-CLI/releases/download/v0.2.29/stacc_0.2.29_Darwin_arm64.tar.gz"
+      sha256 "20ba9c6b81291cd871e336573bb593d8d53841a16377cd12d699de27e4daba90"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/stacc/stacc-CLI/releases/download/v0.1.115/stacc_0.1.115_Darwin_arm64.tar.gz"
-    sha256 "b067cac2a736a3c1e03a1ab088ac6b2a4c1ac02e06543524721e734918316445"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/stacc/stacc-CLI/releases/download/v0.1.115/stacc_0.1.115_Linux_x86_64.tar.gz"
-    sha256 "8e8cdd69a7d80a9e8ca8452de0f268abb8d40a61c0059c8281c618cd71c24fef"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/stacc/stacc-CLI/releases/download/v0.1.115/stacc_0.1.115_Linux_arm64.tar.gz"
-    sha256 "52d3238b9342825c8ead5955e3519792adcc87218c589ef7ace3dd4603fd3848"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/stacc/stacc-CLI/releases/download/v0.2.29/stacc_0.2.29_Linux_x86_64.tar.gz"
+      sha256 "a7ca35163190b0b11a968b8a0e0e5552726bfcd9b72efd542d5481eff0f847fd"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/stacc/stacc-CLI/releases/download/v0.2.29/stacc_0.2.29_Linux_arm64.tar.gz"
+      sha256 "522063bdc4a0f60e851cb23e02a2084df0142b80af8b18ebf0d7a14f970938ee"
+    end
   end
 
   def install
