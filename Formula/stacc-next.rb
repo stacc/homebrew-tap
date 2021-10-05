@@ -5,29 +5,29 @@
 class StaccNext < Formula
   desc "Software used to communicate with Stacc cloud environments"
   homepage "https://github.com/stacc/cli"
-  version "0.4.15"
+  version "0.4.16"
   license "Apache-2.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/stacc/cli-next/releases/download/v0.4.15/stacc_0.4.15_Darwin_x86_64.tar.gz"
-      sha256 "bbe90dd712bd0431588107d9261b9e30e6d5eba38bf407b4027b17bc6c8960c3"
+      url "https://github.com/stacc/cli-next/releases/download/v0.4.16/stacc_0.4.16_Darwin_x86_64.tar.gz"
+      sha256 "af62d0c683925b044ce6a446372d79fd0f92ef28364f5eee9a6bd3d8ac21a09b"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/stacc/cli-next/releases/download/v0.4.15/stacc_0.4.15_Darwin_arm64.tar.gz"
-      sha256 "8830cb0eba43d652a9c7e75c40966e92fd0b7b5e77da10170c39c5c7255e7618"
+      url "https://github.com/stacc/cli-next/releases/download/v0.4.16/stacc_0.4.16_Darwin_arm64.tar.gz"
+      sha256 "f633dac0bd7a8019f366c61de6c1f2632d6b2474b5b41e3312c31eb6f109a3d4"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/stacc/cli-next/releases/download/v0.4.15/stacc_0.4.15_Linux_x86_64.tar.gz"
-      sha256 "1ae69a22bcc960877e9336dcd795422b0b0da0254139c85a616ee113965efa39"
+      url "https://github.com/stacc/cli-next/releases/download/v0.4.16/stacc_0.4.16_Linux_x86_64.tar.gz"
+      sha256 "07bc69a503ac045e218f364b22f2f7961316c359b51213d94f885866cd78de53"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/stacc/cli-next/releases/download/v0.4.15/stacc_0.4.15_Linux_arm64.tar.gz"
-      sha256 "03c8e9903d9ee9cd1c30f91bc10b1271f9da29f308a23cd390f73b44844bbb8d"
+      url "https://github.com/stacc/cli-next/releases/download/v0.4.16/stacc_0.4.16_Linux_arm64.tar.gz"
+      sha256 "e8c46d8d41db52581f5318ff3e824e45ad539480f93f5430f6e3510c90dd4cf8"
     end
   end
 
