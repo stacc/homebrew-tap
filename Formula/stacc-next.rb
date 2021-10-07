@@ -5,29 +5,29 @@
 class StaccNext < Formula
   desc "Software used to communicate with Stacc cloud environments"
   homepage "https://github.com/stacc/cli"
-  version "0.4.18"
+  version "0.4.19"
   license "Apache-2.0"
   bottle :unneeded
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/stacc/cli-next/releases/download/v0.4.18/stacc_0.4.18_Darwin_arm64.tar.gz"
-      sha256 "f61b327de35ec3304254fad7d424a76425828b9488960d3c3fd98c0b5a3ce613"
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/stacc/cli-next/releases/download/v0.4.18/stacc_0.4.18_Darwin_x86_64.tar.gz"
-      sha256 "51d7070824e444f9b783c9677c17ef428156414420f6deb36b7167380031eae8"
+      url "https://github.com/stacc/cli-next/releases/download/v0.4.19/stacc_0.4.19_Darwin_x86_64.tar.gz"
+      sha256 "9228082f214e21188c47b9e253953c962d84cc1b59fa1030e0da53c1a43d906e"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/stacc/cli-next/releases/download/v0.4.19/stacc_0.4.19_Darwin_arm64.tar.gz"
+      sha256 "1e9add29d069aabf987818b12f283e563e24b31fa284132b5d0a60997d3e1074"
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/stacc/cli-next/releases/download/v0.4.18/stacc_0.4.18_Linux_arm64.tar.gz"
-      sha256 "a8c9802944849dd4cb9acd5893dfa03c67582a4ba53f7f834350fa4d172a39bf"
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/stacc/cli-next/releases/download/v0.4.18/stacc_0.4.18_Linux_x86_64.tar.gz"
-      sha256 "ac7bb90d0b776302181c87b011bf69c9ec25bc2885b11e6c75550adfcdd7e5a1"
+      url "https://github.com/stacc/cli-next/releases/download/v0.4.19/stacc_0.4.19_Linux_x86_64.tar.gz"
+      sha256 "cd93d6c4ab95949ed0dc9807b308e7a1a9f1ae58c8771ca2ed44eb2f2d15a5bd"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/stacc/cli-next/releases/download/v0.4.19/stacc_0.4.19_Linux_arm64.tar.gz"
+      sha256 "9e6367588a6715301bedeb9a5d3adbf44a6c7f729a846d6a6df4672b6c7fd096"
     end
   end
 
