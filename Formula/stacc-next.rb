@@ -5,21 +5,21 @@
 class StaccNext < Formula
   desc "Software used to communicate with Stacc cloud environments"
   homepage "https://github.com/stacc/cli"
-  version "0.5.2"
+  version "0.5.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/stacc/cli-next/releases/download/v0.5.2/stacc_0.5.2_Darwin_arm64.tar.gz"
-      sha256 "a24c424470304652ac8ff1fb6955ee50b43b027716297c41a1c119880940a018"
+      url "https://github.com/stacc/cli-next/releases/download/v0.5.3/stacc_0.5.3_Darwin_arm64.tar.gz"
+      sha256 "21e3d4a80f74c2faf9c7a20fe61d15fa7bdf216185b23daa43cdf548c26944a2"
 
       def install
         bin.install "stacc"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/stacc/cli-next/releases/download/v0.5.2/stacc_0.5.2_Darwin_x86_64.tar.gz"
-      sha256 "e378b12bb834edf00217c8e5a836b7a1f0cfa5f3b37caf499037bbd216ee2acd"
+      url "https://github.com/stacc/cli-next/releases/download/v0.5.3/stacc_0.5.3_Darwin_x86_64.tar.gz"
+      sha256 "363598f28afacdf4c3d045ca5a8e72deddaf81864b6e2af32d31943434df289c"
 
       def install
         bin.install "stacc"
@@ -29,16 +29,16 @@ class StaccNext < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/stacc/cli-next/releases/download/v0.5.2/stacc_0.5.2_Linux_x86_64.tar.gz"
-      sha256 "0e795f0ca4fb6a75a5d670d4e23fe42100651137577a578b1e592e0c23a8245e"
+      url "https://github.com/stacc/cli-next/releases/download/v0.5.3/stacc_0.5.3_Linux_x86_64.tar.gz"
+      sha256 "bd58e78a4815651563a35a6e89ea9653f98fa5d2e68c66e670954fa08335e2e7"
 
       def install
         bin.install "stacc"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/stacc/cli-next/releases/download/v0.5.2/stacc_0.5.2_Linux_arm64.tar.gz"
-      sha256 "e93e5e9560638add22cad13f601c56a56bfa69ce6065fc1e3ef70d8a50d6f0d0"
+      url "https://github.com/stacc/cli-next/releases/download/v0.5.3/stacc_0.5.3_Linux_arm64.tar.gz"
+      sha256 "035682275e84e95a2013f2d1ea6693980340b5bdec4a0ffaa90a08897420bee8"
 
       def install
         bin.install "stacc"
