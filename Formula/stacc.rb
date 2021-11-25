@@ -5,34 +5,45 @@
 class Stacc < Formula
   desc "Software used to communicate with Stacc cloud environments"
   homepage "https://github.com/stacc/stacc-CLI"
-  version "0.2.49"
+  version "0.2.50"
   license "Apache-2.0"
-  bottle :unneeded
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/stacc/cli/releases/download/v0.2.49/stacc_0.2.49_Darwin_x86_64.tar.gz"
-      sha256 "8a848dbe2ae7076b1865fc379f80fb9aac818fc9942cce2d464a77f864233a25"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/stacc/cli/releases/download/v0.2.49/stacc_0.2.49_Darwin_arm64.tar.gz"
-      sha256 "1cfc2fa3bab616706ea79b6cff22f1d4f9aeb48e6431f68655f051678aadbe12"
+      url "https://github.com/stacc/cli/releases/download/v0.2.50/stacc_0.2.50_Darwin_arm64.tar.gz"
+      sha256 "34250c909c8ef7198c29396aad03788de8d688f0485750073d6c8cdaf677af4e"
+
+      def install
+        bin.install "stacc"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/stacc/cli/releases/download/v0.2.50/stacc_0.2.50_Darwin_x86_64.tar.gz"
+      sha256 "f5c9a0974ba3fdc24a8af07461331c05cd17b6f2e2989fbb8fc78decca476f0d"
+
+      def install
+        bin.install "stacc"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/stacc/cli/releases/download/v0.2.49/stacc_0.2.49_Linux_x86_64.tar.gz"
-      sha256 "7300486c5c952433f03b0c713bca29a999a8884f2d86ce0b087bd7b557479806"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/stacc/cli/releases/download/v0.2.49/stacc_0.2.49_Linux_arm64.tar.gz"
-      sha256 "c972d0e43f9531e8096b74208fc5409544e656d349dd80b98184382afb913366"
-    end
-  end
+      url "https://github.com/stacc/cli/releases/download/v0.2.50/stacc_0.2.50_Linux_arm64.tar.gz"
+      sha256 "acab53d4110085498da1f80446c4ce8fe7bbe7258ef4dc77fa06cb69af129946"
 
-  def install
-    bin.install "stacc"
+      def install
+        bin.install "stacc"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/stacc/cli/releases/download/v0.2.50/stacc_0.2.50_Linux_x86_64.tar.gz"
+      sha256 "e9ac0de9b549086717fbd892d38ee2c55e09035fc8e9fccd4cc4224ec17c92f4"
+
+      def install
+        bin.install "stacc"
+      end
+    end
   end
 
   test do
