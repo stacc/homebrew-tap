@@ -5,21 +5,21 @@
 class StaccNext < Formula
   desc "Software used to communicate with Stacc cloud environments"
   homepage "https://github.com/stacc/cli"
-  version "0.5.24"
+  version "0.5.25"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/stacc/cli-next/releases/download/v0.5.24/stacc_0.5.24_Darwin_arm64.tar.gz"
-      sha256 "eb59d63c043f5a5671f357a66800d826e06a95e7c909230aeb61f28fe9e6cd31"
+    if Hardware::CPU.intel?
+      url "https://github.com/stacc/cli-next/releases/download/v0.5.25/stacc_0.5.25_Darwin_x86_64.tar.gz"
+      sha256 "e006238336a61290cc3bf061dd62c900be85976d9ab0b9b7e1e5d8acc57988f3"
 
       def install
         bin.install "stacc"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/stacc/cli-next/releases/download/v0.5.24/stacc_0.5.24_Darwin_x86_64.tar.gz"
-      sha256 "47c6689942164ef1c8e5d3c948d0b8842057bd67f7631b67ce8dfd1549bec4ea"
+    if Hardware::CPU.arm?
+      url "https://github.com/stacc/cli-next/releases/download/v0.5.25/stacc_0.5.25_Darwin_arm64.tar.gz"
+      sha256 "5b2783fec0854fb6871cae966897d40226559fc83e635b55d42291c75d290bda"
 
       def install
         bin.install "stacc"
@@ -28,17 +28,17 @@ class StaccNext < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/stacc/cli-next/releases/download/v0.5.24/stacc_0.5.24_Linux_arm64.tar.gz"
-      sha256 "b0be4a126ac39c47b1cc702b3973589bddc18a408cc78387b19972ef5cbd072e"
+    if Hardware::CPU.intel?
+      url "https://github.com/stacc/cli-next/releases/download/v0.5.25/stacc_0.5.25_Linux_x86_64.tar.gz"
+      sha256 "e1ae37cca131d78c2fa41189501bb44fae04e83a1d8ca1f15989fa8ef9d1aa1f"
 
       def install
         bin.install "stacc"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/stacc/cli-next/releases/download/v0.5.24/stacc_0.5.24_Linux_x86_64.tar.gz"
-      sha256 "dd2fbff93bc697b16798b4c80f45ee2285452e33961ed2ed430178bb11d68495"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/stacc/cli-next/releases/download/v0.5.25/stacc_0.5.25_Linux_arm64.tar.gz"
+      sha256 "36a532168685e9629a9f760cfbb145c64fc7ff84d354713c467ff3642f9921f3"
 
       def install
         bin.install "stacc"
