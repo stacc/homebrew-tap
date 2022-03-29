@@ -5,21 +5,21 @@
 class StaccNext < Formula
   desc "Software used to communicate with Stacc cloud environments"
   homepage "https://github.com/stacc/cli"
-  version "0.0.1-morten-herman-test"
+  version "0.0.8-morten-herman-test"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/stacc/cli-next/releases/download/v0.0.1-morten-herman-test/stacc_0.0.1-morten-herman-test_Darwin_arm64.tar.gz"
-      sha256 "7983248fcdb69b9e90f110075ecf4ad87087abe9a3f8ebd864d89637e76c050a"
+      url "https://github.com/stacc/cli-next/releases/download/v0.0.8-morten-herman-test/stacc_0.0.8-morten-herman-test_Darwin_arm64.tar.gz"
+      sha256 "8793a41c4847fed0dead5bffeadf3a3989487e65cfc45764eaa6b210ec482552"
 
       def install
         bin.install "stacc"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/stacc/cli-next/releases/download/v0.0.1-morten-herman-test/stacc_0.0.1-morten-herman-test_Darwin_x86_64.tar.gz"
-      sha256 "6f2dd0f9b287ef65ce4ae605512a745cb530025d805cf28d3e730d165f719af0"
+      url "https://github.com/stacc/cli-next/releases/download/v0.0.8-morten-herman-test/stacc_0.0.8-morten-herman-test_Darwin_x86_64.tar.gz"
+      sha256 "bcf9ebeff05c89f9653f871dc2ebd25377870ae50a9cd97ecb04ea78b2414762"
 
       def install
         bin.install "stacc"
@@ -28,17 +28,17 @@ class StaccNext < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/stacc/cli-next/releases/download/v0.0.1-morten-herman-test/stacc_0.0.1-morten-herman-test_Linux_x86_64.tar.gz"
-      sha256 "45dc5b3e46d38c7b7a7556a5a9cea983107427085a006d75763fa8bb92e375ee"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/stacc/cli-next/releases/download/v0.0.8-morten-herman-test/stacc_0.0.8-morten-herman-test_Linux_arm64.tar.gz"
+      sha256 "143680c0ee093389d029d5f30553687963e691f163c37c15e6e209db600d75af"
 
       def install
         bin.install "stacc"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/stacc/cli-next/releases/download/v0.0.1-morten-herman-test/stacc_0.0.1-morten-herman-test_Linux_arm64.tar.gz"
-      sha256 "d253212229d715d6bd0c9f0d593ab8bbc899a1949852b859288bdd813688e9b9"
+    if Hardware::CPU.intel?
+      url "https://github.com/stacc/cli-next/releases/download/v0.0.8-morten-herman-test/stacc_0.0.8-morten-herman-test_Linux_x86_64.tar.gz"
+      sha256 "b493587331973c7dd5e5be4f6feb7ca3ab14e96e6fdbd493fe9e0f563964d3a9"
 
       def install
         bin.install "stacc"
