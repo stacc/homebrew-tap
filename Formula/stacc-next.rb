@@ -5,21 +5,21 @@
 class StaccNext < Formula
   desc "Software used to communicate with Stacc cloud environments"
   homepage "https://github.com/stacc/cli"
-  version "0.7.51"
+  version "0.7.52"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/stacc/cli-next/releases/download/v0.7.51/stacc_0.7.51_Darwin_x86_64.tar.gz"
-      sha256 "483af932827ed02dd77191114e97335285f27b146816c581a992dfd53ecbb293"
+    if Hardware::CPU.arm?
+      url "https://github.com/stacc/cli-next/releases/download/v0.7.52/stacc_0.7.52_Darwin_arm64.tar.gz"
+      sha256 "1b31d3b152a081a1a52981bbe6a54693b6ff251f854ffe497c8fbdf64e9393c3"
 
       def install
         bin.install "stacc"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/stacc/cli-next/releases/download/v0.7.51/stacc_0.7.51_Darwin_arm64.tar.gz"
-      sha256 "2db1b947ff2103809ee275872281f3a012e54f06536e75eb5b4206856ef96fe1"
+    if Hardware::CPU.intel?
+      url "https://github.com/stacc/cli-next/releases/download/v0.7.52/stacc_0.7.52_Darwin_x86_64.tar.gz"
+      sha256 "c30780b283ba7e564e8ff491f599653e53e2140ede51b50fedf0168eb8f69569"
 
       def install
         bin.install "stacc"
@@ -29,16 +29,16 @@ class StaccNext < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/stacc/cli-next/releases/download/v0.7.51/stacc_0.7.51_Linux_x86_64.tar.gz"
-      sha256 "10d28489119a8d9d2e7e32375254afbfadcdea8a45335eaa08736fe303ac6141"
+      url "https://github.com/stacc/cli-next/releases/download/v0.7.52/stacc_0.7.52_Linux_x86_64.tar.gz"
+      sha256 "2f03a6918c2f129d1d3a0e07bea634759a367e37cff49fad120ebf843ab7356d"
 
       def install
         bin.install "stacc"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/stacc/cli-next/releases/download/v0.7.51/stacc_0.7.51_Linux_arm64.tar.gz"
-      sha256 "9fe892da6471dc7b3056edb84b327d9d92c1b50e3fa90129f2f0470646196736"
+      url "https://github.com/stacc/cli-next/releases/download/v0.7.52/stacc_0.7.52_Linux_arm64.tar.gz"
+      sha256 "9878f9c00ca81f3171d72be455459f269e2309b2d4656b12b6b1be9ccaa92d47"
 
       def install
         bin.install "stacc"
