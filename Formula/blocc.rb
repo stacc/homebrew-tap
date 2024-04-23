@@ -5,21 +5,21 @@
 class Blocc < Formula
   desc "CLI to use interact with the blocc ecosystem."
   homepage "https://github.com/stacc/blocc-cli-releases"
-  version "0.14.5"
+  version "0.14.6"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/stacc/blocc-cli-releases/releases/download/cli-v0.14.5/blocc_0.14.5_darwin_amd64.tar.gz"
-      sha256 "7b6962b4e37759eee66d6c6bc36b1e7541ade866f3ebd459c9600635f89d02da"
+      url "https://github.com/stacc/blocc-cli-releases/releases/download/cli-v0.14.6/blocc_0.14.6_darwin_amd64.tar.gz"
+      sha256 "5863ad424334e77fd77a5b4a928bdb2981e237cf9832098c2d55cb00b55f749d"
 
       def install
         bin.install "blocc"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/stacc/blocc-cli-releases/releases/download/cli-v0.14.5/blocc_0.14.5_darwin_arm64.tar.gz"
-      sha256 "80e26ccf9901868ec4da59ea0ba804c0d57aed4d58f90f3b8ea3e0cc48e3c53a"
+      url "https://github.com/stacc/blocc-cli-releases/releases/download/cli-v0.14.6/blocc_0.14.6_darwin_arm64.tar.gz"
+      sha256 "0308c7d88acc59d636b725dfdba65e659e50cdc77dedf8d6a680db3c902b80fa"
 
       def install
         bin.install "blocc"
@@ -29,16 +29,16 @@ class Blocc < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/stacc/blocc-cli-releases/releases/download/cli-v0.14.5/blocc_0.14.5_linux_arm64.tar.gz"
-      sha256 "c01102de36aa89cbd6c8b66930ac97df8fe40a86fa043ff1157b3c4948989640"
+      url "https://github.com/stacc/blocc-cli-releases/releases/download/cli-v0.14.6/blocc_0.14.6_linux_arm64.tar.gz"
+      sha256 "22af740f8cefe1f936e347b420785e2bbbde637c52d58d9392317f04a602a7fd"
 
       def install
         bin.install "blocc"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/stacc/blocc-cli-releases/releases/download/cli-v0.14.5/blocc_0.14.5_linux_amd64.tar.gz"
-      sha256 "e9559c68cd2608f79f7296e6fb1c7b6a65c5a9de5cb40b1728222ffaac93b44f"
+      url "https://github.com/stacc/blocc-cli-releases/releases/download/cli-v0.14.6/blocc_0.14.6_linux_amd64.tar.gz"
+      sha256 "3cf097c3e1b6f427265a0e136127aefd00dc17d12b51e26f15d4303e7dbc93f4"
 
       def install
         bin.install "blocc"
