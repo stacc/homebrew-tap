@@ -5,21 +5,21 @@
 class StaccNext < Formula
   desc "Software used to communicate with Stacc cloud environments"
   homepage "https://github.com/stacc/cli"
-  version "0.7.70"
+  version "0.7.71"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/stacc/cli-next/releases/download/v0.7.70/stacc_0.7.70_Darwin_x86_64.tar.gz"
-      sha256 "cdcf0bf497b045b8fb815e7705c6c8c0558754a21e421877760b6677ca3bd144"
+      url "https://github.com/stacc/cli-next/releases/download/v0.7.71/stacc_0.7.71_Darwin_x86_64.tar.gz"
+      sha256 "8d83aa5cced272a438afaf53dc3a349afa9e747c5b85848f300513614b575393"
 
       def install
         bin.install "stacc"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/stacc/cli-next/releases/download/v0.7.70/stacc_0.7.70_Darwin_arm64.tar.gz"
-      sha256 "2d5b20555790f15c83b2947ac46efdb3bfb45854095170f1950e2568ddcd0a6e"
+      url "https://github.com/stacc/cli-next/releases/download/v0.7.71/stacc_0.7.71_Darwin_arm64.tar.gz"
+      sha256 "42a7896d08e4b1039a0dedb3e071cb2047e786461b889d644eb81004687b5118"
 
       def install
         bin.install "stacc"
@@ -29,16 +29,16 @@ class StaccNext < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/stacc/cli-next/releases/download/v0.7.70/stacc_0.7.70_Linux_x86_64.tar.gz"
-      sha256 "083f21b48fd0a4b4c1aa1cd3941009b024623bb3b707bd89e410d143c6cbcaf3"
+      url "https://github.com/stacc/cli-next/releases/download/v0.7.71/stacc_0.7.71_Linux_x86_64.tar.gz"
+      sha256 "f39173f6bdb7d6797ab3148dc17c40151c658075b592a2ca90fd83d77f0d8bd3"
 
       def install
         bin.install "stacc"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/stacc/cli-next/releases/download/v0.7.70/stacc_0.7.70_Linux_arm64.tar.gz"
-      sha256 "fcc12b0b42fe371a74c8d1008a505ee4eef999a6f904ee1d425cf081590bfd70"
+      url "https://github.com/stacc/cli-next/releases/download/v0.7.71/stacc_0.7.71_Linux_arm64.tar.gz"
+      sha256 "c51c85c03acc42427f82170a068df39354e66d1b04063d48cf8ff46a0b8e03f5"
 
       def install
         bin.install "stacc"
