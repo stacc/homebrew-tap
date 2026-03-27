@@ -5,21 +5,21 @@
 class BloccBeta < Formula
   desc "CLI to use interact with the blocc ecosystem."
   homepage "https://github.com/stacc/blocc-cli-releases"
-  version "1.8.0-beta.8"
+  version "1.8.0-beta.9"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/stacc/blocc-cli-releases/releases/download/beta-cli-v1.8.0-beta.8/blocc-beta_1.8.0-beta.8_darwin_amd64.tar.gz"
-      sha256 "020879105ef60673ad9eb5025da29a909e8411f679ba0452aa51068bed73bfe5"
+      url "https://github.com/stacc/blocc-cli-releases/releases/download/beta-cli-v1.8.0-beta.9/blocc-beta_1.8.0-beta.9_darwin_amd64.tar.gz"
+      sha256 "5c336112fff6030f226663c4e55a1192c2e35e1fbdff40d809771baef3f36db0"
 
       def install
         bin.install "blocc-beta"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/stacc/blocc-cli-releases/releases/download/beta-cli-v1.8.0-beta.8/blocc-beta_1.8.0-beta.8_darwin_arm64.tar.gz"
-      sha256 "ed1fcfb25fff1fdd549e34e78acf9ac2a5aac50be2e9f057b558ef90fe2117bf"
+      url "https://github.com/stacc/blocc-cli-releases/releases/download/beta-cli-v1.8.0-beta.9/blocc-beta_1.8.0-beta.9_darwin_arm64.tar.gz"
+      sha256 "c35ea3fc9498dcea8e376e5b105d3cd02d6568461821eed1d3ff6044e11953f9"
 
       def install
         bin.install "blocc-beta"
@@ -29,15 +29,15 @@ class BloccBeta < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/stacc/blocc-cli-releases/releases/download/beta-cli-v1.8.0-beta.8/blocc-beta_1.8.0-beta.8_linux_amd64.tar.gz"
-      sha256 "dca0d007a1d6757edfb006e929b8203063c8b2d1970def40b1cd44ca1e3e81e8"
+      url "https://github.com/stacc/blocc-cli-releases/releases/download/beta-cli-v1.8.0-beta.9/blocc-beta_1.8.0-beta.9_linux_amd64.tar.gz"
+      sha256 "3afeb5256f31a1469933abbb5034df6092350c5294a1eed7f25ae9f63984e083"
       def install
         bin.install "blocc-beta"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/stacc/blocc-cli-releases/releases/download/beta-cli-v1.8.0-beta.8/blocc-beta_1.8.0-beta.8_linux_arm64.tar.gz"
-      sha256 "6945fee3269f8786b56b6117c5e0a56fd001507ed51c052a9d9627b7c310d62c"
+      url "https://github.com/stacc/blocc-cli-releases/releases/download/beta-cli-v1.8.0-beta.9/blocc-beta_1.8.0-beta.9_linux_arm64.tar.gz"
+      sha256 "719f16d05f769079958c36376d35036b588cbeb65083964edba48044ed6c6f12"
       def install
         bin.install "blocc-beta"
       end
