@@ -5,21 +5,21 @@
 class BloccStudio < Formula
   desc "CLI to use interact with the blocc ecosystem, blocc-studio build."
   homepage "https://github.com/stacc/blocc-cli-releases"
-  version "1.11.0-studio.1"
+  version "1.11.0-studio.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/stacc/blocc-cli-releases/releases/download/studio-cli-v1.11.0-studio.1/blocc-studio_1.11.0-studio.1_darwin_amd64.tar.gz"
-      sha256 "4b9de1d341e857d2d37f78581774e7108db4214cf0821c98e9fa18c2eb93bfb5"
+      url "https://github.com/stacc/blocc-cli-releases/releases/download/studio-cli-v1.11.0-studio.2/blocc-studio_1.11.0-studio.2_darwin_amd64.tar.gz"
+      sha256 "1ea5f92708c5733e174b60a8ca5d963f6ecdb51dcd61afdbc37d4c63b511c484"
 
       def install
         bin.install "blocc-studio"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/stacc/blocc-cli-releases/releases/download/studio-cli-v1.11.0-studio.1/blocc-studio_1.11.0-studio.1_darwin_arm64.tar.gz"
-      sha256 "97b8206a78d8ae9357ea9d3f9fffc1aeb54c7a052516fe29430d63abb05b54d6"
+      url "https://github.com/stacc/blocc-cli-releases/releases/download/studio-cli-v1.11.0-studio.2/blocc-studio_1.11.0-studio.2_darwin_arm64.tar.gz"
+      sha256 "a358abf338c85a4a548d528470be33ab21e54970fd9a28405d7a833e18230932"
 
       def install
         bin.install "blocc-studio"
@@ -29,15 +29,15 @@ class BloccStudio < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/stacc/blocc-cli-releases/releases/download/studio-cli-v1.11.0-studio.1/blocc-studio_1.11.0-studio.1_linux_amd64.tar.gz"
-      sha256 "9e255b295952ba2a9536c1d1d0d79366ee0e3a829876a0e913b1e7abcc195f8b"
+      url "https://github.com/stacc/blocc-cli-releases/releases/download/studio-cli-v1.11.0-studio.2/blocc-studio_1.11.0-studio.2_linux_amd64.tar.gz"
+      sha256 "2361fa50922e82724b2af57305f2677c6185884b0bf9382ce9d3fa72150fc3b2"
       def install
         bin.install "blocc-studio"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/stacc/blocc-cli-releases/releases/download/studio-cli-v1.11.0-studio.1/blocc-studio_1.11.0-studio.1_linux_arm64.tar.gz"
-      sha256 "62755bd3ad3e64c62f92e62a421d99397704435782df8c6159e00acafe162069"
+      url "https://github.com/stacc/blocc-cli-releases/releases/download/studio-cli-v1.11.0-studio.2/blocc-studio_1.11.0-studio.2_linux_arm64.tar.gz"
+      sha256 "13bce3d6ba43515235e00063722c1d517850cd5efccc0c595066df7dde50ea0c"
       def install
         bin.install "blocc-studio"
       end
