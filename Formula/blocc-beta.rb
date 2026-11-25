@@ -5,21 +5,21 @@
 class BloccBeta < Formula
   desc "CLI to use interact with the blocc ecosystem."
   homepage "https://github.com/stacc/blocc-cli-releases"
-  version "1.12.0-beta.8"
+  version "1.12.0-beta.11"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/stacc/blocc-cli-releases/releases/download/beta-cli-v1.12.0-beta.8/blocc-beta_1.12.0-beta.8_darwin_amd64.tar.gz"
-      sha256 "2505e90efa1da63750101a9457c6a3460553c3261760cc2938db80e92554a388"
+      url "https://github.com/stacc/blocc-cli-releases/releases/download/beta-cli-v1.12.0-beta.11/blocc-beta_1.12.0-beta.11_darwin_amd64.tar.gz"
+      sha256 "cc3dadc10eaafb738f656acb15113d5d72c2dcd96975c3034e7e7cea399527dd"
 
       define_method(:install) do
         bin.install "blocc-beta"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/stacc/blocc-cli-releases/releases/download/beta-cli-v1.12.0-beta.8/blocc-beta_1.12.0-beta.8_darwin_arm64.tar.gz"
-      sha256 "5cbd998b4a3edc7b68bfc396c59c1f1c6f534f74dc09ff8dbf0e0572f8c6ca5d"
+      url "https://github.com/stacc/blocc-cli-releases/releases/download/beta-cli-v1.12.0-beta.11/blocc-beta_1.12.0-beta.11_darwin_arm64.tar.gz"
+      sha256 "91db055526c625c59b59c669109116e18b9070142fb0b11238e4a712fe64c245"
 
       define_method(:install) do
         bin.install "blocc-beta"
@@ -29,15 +29,15 @@ class BloccBeta < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/stacc/blocc-cli-releases/releases/download/beta-cli-v1.12.0-beta.8/blocc-beta_1.12.0-beta.8_linux_amd64.tar.gz"
-      sha256 "849b53b43d23806bca9a1a972421e8e1d01496de95e74e527da7fca2e428fc18"
+      url "https://github.com/stacc/blocc-cli-releases/releases/download/beta-cli-v1.12.0-beta.11/blocc-beta_1.12.0-beta.11_linux_amd64.tar.gz"
+      sha256 "8fe3bdf660942095176add6f41bfd4baf918b856158cdefab91bab6070a0722e"
       define_method(:install) do
         bin.install "blocc-beta"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/stacc/blocc-cli-releases/releases/download/beta-cli-v1.12.0-beta.8/blocc-beta_1.12.0-beta.8_linux_arm64.tar.gz"
-      sha256 "01d5fb7fe00daba20e003b0b4a72640c6aeae9d1cc13086902436a1b4b439d8f"
+      url "https://github.com/stacc/blocc-cli-releases/releases/download/beta-cli-v1.12.0-beta.11/blocc-beta_1.12.0-beta.11_linux_arm64.tar.gz"
+      sha256 "7fa167eede6eb5d145f4c2782b7baf8d134927d06693feddde5f97f8243d05ec"
       define_method(:install) do
         bin.install "blocc-beta"
       end
